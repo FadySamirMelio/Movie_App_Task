@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+apply from: "$rootProject.projectDir/androidx.gradle"
+apply from: "$rootProject.projectDir/hilt.gradle"
+apply from: "$rootProject.projectDir/retrofit.gradle"
+apply from: "$rootProject.projectDir/coroutines.gradle"
+dependencies {
+    implementation project(':network')
+    implementation 'com.github.GrenderG:Toasty:1.5.0'
+}

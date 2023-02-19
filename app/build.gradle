@@ -1,0 +1,8 @@
+apply from: "$rootProject.projectDir/base.gradle"
+apply plugin: 'kotlin-android'
+
+dependencies {
+    implementation project(':core')
+    implementation project(':network')
+    implementation project(':features:movies')
+}

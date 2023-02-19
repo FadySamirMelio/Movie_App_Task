@@ -1,0 +1,8 @@
+apply plugin: 'com.android.library'
+apply from: "$rootProject.projectDir/hilt.gradle"
+apply from: "$rootProject.projectDir/retrofit.gradle"
+apply from: "$rootProject.projectDir/coroutines.gradle"
+dependencies {
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+}

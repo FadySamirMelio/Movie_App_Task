@@ -1,0 +1,13 @@
+Run firebase-tools-instant-win.exe in the Project folder
+
+=================================================
+
+To use CI for uploading the apk for tester on Firebase Distribution run:
+firebase appdistribution:distribute PATH_TO_MOVIE_APK_LOCATION\MOVIE_APK_NAME.apk --app 1:22898180817:android:3749926670131348357bf0 --release-notes "Bug fixes and improvements"
+
+=================================================
+
+Add testers by running: 
+firebase appdistribution:testers:add anothertester@email.com moretesters@email.com
+
+
