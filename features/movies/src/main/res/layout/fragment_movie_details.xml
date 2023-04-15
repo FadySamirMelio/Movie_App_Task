@@ -37,6 +37,15 @@
                 android:background="@drawable/shape_circle"
                 android:src="@drawable/ic_favorite_border_black_24dp" />
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_back"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="16dp"
+                android:layout_gravity="start|top"
+                android:tint="@color/teal_200"
+                android:src="@drawable/ic_arrow_back" />
+
         </FrameLayout>
 
 

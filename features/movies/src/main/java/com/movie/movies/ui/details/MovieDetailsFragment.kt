@@ -40,9 +40,9 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding, MovieDeta
         getGenresList(viewModel.movieModel.id.toString())
         bind()
         viewModel.movieIsFavorite(viewModel.movieModel.id.toString())
-            .observe(viewLifecycleOwner, Observer {
+            .observe(viewLifecycleOwner) {
                 changeFavoriteIcon(it.isNotEmpty())
-            })
+            }
     }
 
     private fun bind() {
@@ -54,8 +54,10 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding, MovieDeta
             .into(binding.ivPoster)
 
         binding.ivFavorite.setOnClickListener {
-            viewModel.movieModel
             viewModel.saveFavorite(viewModel.movieModel.toMovieEntity(), !movieIsFavorite)
+        }
+        binding.ivBack.setOnClickListener {
+            activity?.finish()
         }
 
     }
@@ -79,7 +81,7 @@ class MovieDetailsFragment : BaseFragment<FragmentMovieDetailsBinding, MovieDeta
         }
     }
 
-    private fun updateGenresInUI(){
+    private fun updateGenresInUI() {
         var genresListString = ""
         for (genre in viewModel.genresList) {
             genresListString +=

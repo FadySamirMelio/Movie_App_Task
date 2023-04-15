@@ -27,6 +27,18 @@
         <entry key="..\:/Android_Apps/Movie App Task/features/movies/src/main/res/layout/activity_movie_details.xml" value="0.17916666666666667" />
         <entry key="..\:/Android_Apps/Movie App Task/features/movies/src/main/res/layout/fragment_my_favourite.xml" value="0.1" />
         <entry key="..\:/Android_Apps/Movie App Task/features/movies/src/main/res/layout/item_movie.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_close.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_favorite_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_favorite_border_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_movie_now_playing.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_movie_placeholder.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_search.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_star_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/ic_top_rated.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/drawable/shape_circle.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/layout/fragment_movie_details.xml" value="0.15729166666666666" />
+        <entry key="..\:/Users/Administrator/Desktop/Movie App Task/features/movies/src/main/res/layout/fragment_search.xml" value="0.1" />
       </map>
     </option>
   </component>
