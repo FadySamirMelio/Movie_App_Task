@@ -1,0 +1,9 @@
+include ':core'
+include ':network'
+include ':app'
+rootProject.name = "Movie App Task"
+include ':cache'
+include ':cache'
+include ':cache'
+include ':utils'
+include ':features:movies'

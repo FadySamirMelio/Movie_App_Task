@@ -1,0 +1,16 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
+dependencies {
+    def hiltVersion = '1.0.0-alpha03'
+
+    // Hilt dependencies
+    implementation 'com.google.dagger:hilt-android:2.42'
+    kapt 'com.google.dagger:hilt-android-compiler:2.42'
+
+    // Hilt View Model
+    kapt "androidx.hilt:hilt-compiler:$hiltVersion"
+    annotationProcessor "androidx.hilt:hilt-compiler:$hiltVersion"
+    implementation "androidx.activity:activity-ktx:1.2.2"
+    implementation "androidx.fragment:fragment-ktx:1.3.3"
+}

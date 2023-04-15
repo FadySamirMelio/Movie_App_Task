@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Movies App</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="search">Search</string>
+    <string name="favourites">Favourites</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="description_title">Description</string>
+    <string name="no_favourites">No favourite movies yet!</string>
+</resources>

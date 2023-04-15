@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/nowPlayingFragment"
+        android:icon="@drawable/ic_movie_now_playing"
+        android:title="@string/now_playing" />
+    <item
+        android:id="@+id/topRatedFragment"
+        android:icon="@drawable/ic_top_rated"
+        android:iconTint="#a2a2a2"
+        android:title="@string/top_rated"
+        tools:targetApi="o" />
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_search"
+        android:iconTint="#a2a2a2"
+        android:title="@string/search"
+        tools:targetApi="o" />
+ <item
+        android:id="@+id/myFavouriteFragment"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:iconTint="#a2a2a2"
+        android:title="@string/favourites"
+        tools:targetApi="o" />
+</menu>

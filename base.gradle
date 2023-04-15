@@ -1,0 +1,73 @@
+apply plugin:'com.android.application'
+apply plugin:'kotlin-android'
+apply plugin:'kotlin-android-extensions'
+apply plugin:'kotlin-kapt'
+apply from: "$rootProject.projectDir/androidx.gradle"
+apply from: "$rootProject.projectDir/hilt.gradle"
+apply from: "$rootProject.projectDir/retrofit.gradle"
+apply from: "$rootProject.projectDir/coroutines.gradle"
+
+android {
+    buildToolsVersion versions.buildToolsVersion
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.movie.task"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    variantFilter { variant ->
+        def name_types = variant.flavors*.name
+        def name = name_types.join()
+        if (variant.buildType.name == "release" && (name.contains("development") || name.contains("stagging"))) {
+            setIgnore(true)
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        qcTesting {
+            initWith release
+        }
+    }
+    def BASE_URL = "BASE_URL"
+    flavorDimensions "mode"
+    productFlavors {
+        live {
+            dimension "mode"
+            buildConfigField "String", BASE_URL, '"https://api.themoviedb.org/3"'
+        }
+        development {
+            dimension "mode"
+            buildConfigField "String", BASE_URL, '"https://api.themoviedb.org/3"'
+        }
+        stagging {
+            dimension "mode"
+            buildConfigField "String", BASE_URL, '"https://api.themoviedb.org/3"'
+        }
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+}

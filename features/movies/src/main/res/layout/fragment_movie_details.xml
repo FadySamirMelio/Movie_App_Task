@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:paddingBottom="16dp"
+    tools:context=".ui.details.MovieDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/fl_poster"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/shape_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_poster"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:scaleType="centerCrop" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_favorite"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_margin="16dp"
+                android:layout_gravity="end|top"
+                android:tint="@color/teal_200"
+                android:background="@drawable/shape_circle"
+                android:src="@drawable/ic_favorite_border_black_24dp" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/montserrat_bold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/primaryColor"
+            android:textSize="20sp"
+            tools:text="Movie Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fl_poster" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_vote_average"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:translationZ="9dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_movie_title"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/material_color_yellow_700"
+                app:srcCompat="@drawable/ic_star_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_vote_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/montserrat_light"
+                tools:text="8.9"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+   <TextView
+                android:id="@+id/tv_total_votes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/montserrat_light"
+                tools:text="/350 Votes"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_genre_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_light"
+            android:maxLines="1"
+            android:textColor="@color/primaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_movie_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movie_title" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/tv_genre_value">
+
+            <TextView
+                android:id="@+id/tv_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/description_title"
+                android:textColor="@color/Black_60"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_description_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/montserrat_light"
+                android:textColor="@color/primaryColor"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_description_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_description_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
